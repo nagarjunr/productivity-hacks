@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source /Users/nagarjun/Nagarjun/WorkSpace/VSCode/productivity-hacks/.venv/bin/activate)",
+      "Bash(python -c \"import pikepdf; print\\(''pikepdf ok''\\)\")",
+      "Bash(python -c \"import pypdf; print\\(''pypdf ok''\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}
