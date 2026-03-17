@@ -9,15 +9,18 @@ A collection of useful scripts and Claude skills for everyday productivity tasks
 Compress PDF files to a target size while maintaining the best possible quality.
 
 **Usage:**
+
 ```bash
 python compress_pdf.py
 ```
 
 **Requirements:**
+
 - Ghostscript: `brew install ghostscript`
 - Python 3.x
 
 **Features:**
+
 - Intelligent quality selection based on target size
 - Tries highest quality first, stops when target is met
 - Supports custom target sizes (default 1000 KB)
@@ -31,6 +34,7 @@ python compress_pdf.py
 Use this skill in Claude Code to compress PDFs interactively.
 
 **Usage:**
+
 ```
 /compress-pdf
 ```
@@ -52,4 +56,4 @@ The skill will guide you through selecting a PDF file and target size, then comp
 
 ## License
 
-MIT
+This project is provided as-is for educational and productivity purposes. Feel free to use, modify, and share these scripts and skills in your own projects. A link back to this repository is appreciated but not required.
