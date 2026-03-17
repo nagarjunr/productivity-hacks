@@ -38,3 +38,6 @@ build/
 
 # OS
 Thumbs.db
+
+# Custom
+settings.local.json
