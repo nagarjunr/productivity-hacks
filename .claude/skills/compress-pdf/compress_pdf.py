@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+"""
+PDF Compressor
+
+Compress PDF files to a target size using Ghostscript while maintaining
+the best possible quality. Tries compression levels from highest to lowest
+quality and stops at the first one that meets the target size.
+"""
+
 import subprocess
 import os
 from datetime import datetime
@@ -5,24 +14,32 @@ from pathlib import Path
 
 
 def compress_pdf(input_file, output_file, target_size_kb):
+    """
+    Compress a PDF file to meet a target size.
+    
+    Args:
+        input_file: Path to the input PDF
+        output_file: Path for the output PDF
+        target_size_kb: Target size in kilobytes
+        
+    Returns:
+        bool: True if compression succeeded within target, False otherwise
+    """
     # Select quality levels based on target size (highest quality first)
     if target_size_kb <= 200:
-        # Very small - try only screen
         qualities = ["/screen"]
     elif target_size_kb <= 500:
-        # Small - try ebook and screen
         qualities = ["/ebook", "/screen"]
     elif target_size_kb <= 1000:
-        # Medium - try printer, ebook, and screen
         qualities = ["/printer", "/ebook", "/screen"]
     else:
-        # Large - try all quality levels from highest to lowest
         qualities = ["/prepress", "/printer", "/ebook", "/screen"]
 
     print(f"Target size: {target_size_kb} KB")
     print(f"Will try quality levels (highest to lowest): {qualities}\n")
 
     temp_output = output_file + ".tmp"
+    size_kb = 0
 
     for quality in qualities:
         subprocess.run([
@@ -41,13 +58,11 @@ def compress_pdf(input_file, output_file, target_size_kb):
         print(f"Quality {quality} -> {size_kb:.2f} KB")
 
         if size_kb <= target_size_kb:
-            # This quality fits! Use it and we're done
             os.rename(temp_output, output_file)
             print(f"\n✓ Compression successful! Using {quality} quality")
             print(f"Final size: {size_kb:.2f} KB")
             return True
 
-    # None of the qualities fit under target
     if os.path.exists(temp_output):
         os.rename(temp_output, output_file)
 
@@ -56,16 +71,27 @@ def compress_pdf(input_file, output_file, target_size_kb):
     return False
 
 
-if __name__ == "__main__":
-    input_pdf = input("Enter input PDF path: ")
+def main():
+    input_pdf = input("Enter input PDF path: ").strip()
+    
+    if not os.path.exists(input_pdf):
+        print(f"Error: File not found: {input_pdf}")
+        return
 
     target_size = input("Enter target size in KB (default 1000): ").strip()
-    target_size_kb = int(target_size) if target_size else 1000
+    try:
+        target_size_kb = int(target_size) if target_size else 1000
+    except ValueError:
+        print(f"Error: Invalid size '{target_size}'. Please enter a number.")
+        return
 
-    # Generate output filename: inputname_COMPRESSED_timestamp.pdf
     input_path = Path(input_pdf)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_pdf = f"{input_path.stem}_COMPRESSED_{timestamp}.pdf"
 
     compress_pdf(input_pdf, output_pdf, target_size_kb)
     print(f"\nOutput saved to: {output_pdf}")
+
+
+if __name__ == "__main__":
+    main()
