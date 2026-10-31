@@ -1,0 +1,39 @@
+VIDEOS
+1. LLM Introduction: https://lnkd.in/difutThA
+2. LLMs from Scratch: https://lnkd.in/dhibRHv4
+3. Agentic AI Overview (Stanford): https://lnkd.in/dtWSRY3y
+4. Building and Evaluating Agents: https://lnkd.in/dtM-KeVe
+5. Building Effective Agents: https://lnkd.in/dUHYGzub
+6. Building Agents with MCP: https://lnkd.in/dbQGbG8K
+7. Building an Agent from Scratch: https://lnkd.in/di6Q_z35
+8. Philo Agents: https://lnkd.in/djZB_Zqt
+
+REPOS
+1. GenAI Agents: https://lnkd.in/d8eHCvcQ
+2. Microsoft's AI Agents for Beginners: https://lnkd.in/gnttES_f
+3. Prompt Engineering Guide: https://lnkd.in/ddpy7dcF
+4. Hands-On Large Language Models: https://lnkd.in/drxhtG-x
+5. AI Agents for Beginners: https://lnkd.in/gnttES_f
+6. GenAI Agents: https://lnkd.in/d8eHCvcQ
+7. Made with ML: https://lnkd.in/dZvJaRA5
+8. Hands-On AI Engineering: https://lnkd.in/d-Rb2s_Z
+9. Awesome Generative AI Guide: https://lnkd.in/dTHSXSFy
+10. Designing Machine Learning Systems: https://lnkd.in/dpCEFD_t
+11. Machine Learning for Beginners from Microsoft: https://lnkd.in/ddpBr-Eu
+12. LLM Course: https://lnkd.in/dwmdf-Aw
+
+GUIDES
+1. Google's Agent Whitepaper: https://lnkd.in/d3kNKVT3
+2. Google's Agent Companion: https://lnkd.in/dEUdnC-h
+3. Building Effective Agents by Anthropic: https://lnkd.in/denn-fyW
+4. Claude Code Best Agentic Coding Practices: https://lnkd.in/diPRvTMC
+5. OpenAI's Practical Guide to Building Agents: https://lnkd.in/dQ5f_vYw
+
+BOOKS
+1. Understanding Deep Learning: https://lnkd.in/diztb36m
+2. Building an LLM from Scratch: https://lnkd.in/dtcJz5AH
+3. The LLM Engineering Handbook: https://lnkd.in/dJ29QdyS
+4. AI Agents: The Definitive Guide: https://lnkd.in/dHZGiuvK
+5. Building Applications with AI Agents: https://lnkd.in/dkE4TK3r
+6. AI Agents with MCP: https://lnkd.in/dRDhgD23
+7. AI Engineering: https://lnkd.in/d-BrUwSj
